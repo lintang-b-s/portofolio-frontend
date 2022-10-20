@@ -29,8 +29,13 @@ const TechnologiesListPage = () => {
 				
 			
 			
+<<<<<<< HEAD
 	};	let bukannone = profile.filter(pro => pro.name!= "None")
 		return bukannone
+=======
+	};
+		return profile
+>>>>>>> upstream/main
 		.map((profile) => (
 			<div  key={profile._id}>
 				<TechnologiesSingle

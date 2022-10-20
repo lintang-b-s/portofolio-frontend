@@ -24,11 +24,15 @@ const TechnologiesSingle = (props) => {
 
             })}
 
+<<<<<<< HEAD
             {/* <img
                                 src = {props.profile.technologies[0].image}
                                 className="rounded-lg "
                                 alt="gambar"
                             /> */}
+=======
+
+>>>>>>> upstream/main
         </div>
     
          

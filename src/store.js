@@ -1,4 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
+<<<<<<< HEAD
 import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
@@ -86,6 +87,35 @@ const middleware = [thunk,logger]
 const store = createStore(
     reducer,
     initialState,
+=======
+import thunk from 'redux-thunk'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import {
+    profileDetailReducer
+    
+} from './reducers/profileReducers'
+import {
+    projectListReducer,
+    projectDetailsReducer
+} from './reducers/projectReducers'
+// import {
+//     organizationListReducer,
+//     organizationDetailsReducer,
+// } from './reducers/organizationReducer'
+
+const reducer = combineReducers({
+    profileDetails: profileDetailReducer,
+    projectList: projectListReducer,
+    projectDetails: projectDetailsReducer,
+
+
+})
+
+const middleware = [thunk]
+
+const store = createStore(
+    reducer,
+>>>>>>> upstream/main
     composeWithDevTools(applyMiddleware(...middleware))
 )
 

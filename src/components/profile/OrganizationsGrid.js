@@ -30,9 +30,13 @@ const OrganizationListPage = () => {
 			
 			
 	};
+<<<<<<< HEAD
 
 		let bukannone = profile.filter(pro => pro.name!= "None")
 		return bukannone
+=======
+		return profile
+>>>>>>> upstream/main
 		.map((profile) => (
 			<div className='flex justify-center' key={profile._id}>
 				<OrganizationSingle

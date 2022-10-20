@@ -6,6 +6,7 @@ const ProjectSingle = (props) => {
     return (
         
 
+<<<<<<< HEAD
         <Link to={`/projects/${props.project._id}`} aria-label="Proyek" >
             <div className='snap-start  rounded-lg shadow-lg cursor-pointer bg-secondary-light dark:bg-ternary-dark mb-10'>
                 <div>
@@ -20,6 +21,17 @@ const ProjectSingle = (props) => {
                 </div>
 
               
+=======
+        <Link to="/project/:id" aria-label="Proyek" >
+            <div className='snap-start  rounded-lg shadow-lg cursor-pointer bg-secondary-light dark:bg-ternary-dark mb-10'>
+                <div>
+                    <img
+                        src = {props.project.image}
+                        className="rounded-lg"
+                        alt="proyek"
+                    />
+                </div>
+>>>>>>> upstream/main
                 <div className="text-center px-4 py-6">
 						<p className="font-general-medium text-lg md:text-xl text-ternary-dark dark:text-ternary-light mb-2">
 							{props.project.name}

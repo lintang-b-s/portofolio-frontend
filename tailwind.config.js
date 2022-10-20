@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /** @type {import('tailwindcss').Config} */
 const colors = require("tailwindcss/colors");
@@ -145,3 +146,13 @@ variants: [
             
 ],
 };
+=======
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+>>>>>>> upstream/main

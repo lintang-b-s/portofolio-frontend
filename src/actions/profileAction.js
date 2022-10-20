@@ -1,5 +1,6 @@
 import axios from 'axios'
 import {
+<<<<<<< HEAD
     PROFILE_DETAILS_REQUEST,
     PROFILE_DETAILS_SUCCESS,
     PROFILE_DETAILS_FAIL,
@@ -59,22 +60,42 @@ export const getProfileOneDetails = (id) => async (dispatch, getState) => {
 export const profileDetail = () => async (dispatch) => {
     try {
         dispatch({ type: PROFILE_DETAILS_REQUEST })
+=======
+    PROFILE_REQUEST,
+    PROFILE_SUCCESS,
+    PROFILE_FAIL
+    
+} from '../constants/profileConstants'
+
+export const profileDetail = () => async (dispatch) => {
+    try {
+        dispatch({ type: PROFILE_REQUEST })
+>>>>>>> upstream/main
 
         const { data } = await axios.get(`http://localhost:3001/api/about`)
 
         dispatch({
+<<<<<<< HEAD
             type: PROFILE_DETAILS_SUCCESS,
+=======
+            type: PROFILE_SUCCESS,
+>>>>>>> upstream/main
             payload: data,
         })
     } catch (error) {
         dispatch({
+<<<<<<< HEAD
             type: PROFILE_DETAILS_FAIL,
+=======
+            type: PROFILE_FAIL,
+>>>>>>> upstream/main
             payload:
                 error.response && error.response.data.message
                 ? error.response.data.message
                 : error.message,
         })
     }
+<<<<<<< HEAD
 }
 
 export const updateProfile = (profile) => async (dispatch, getState) => {
@@ -132,3 +153,6 @@ export const updateProfile = (profile) => async (dispatch, getState) => {
 //             )
 //         }
 //     }
+=======
+}
+>>>>>>> upstream/main

@@ -7,14 +7,18 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 import './fontawesome';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+<<<<<<< HEAD
 import { ThemeProvider } from "@material-tailwind/react";
 
+=======
+>>>>>>> upstream/main
 
 const container = document.getElementById('root');
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
+<<<<<<< HEAD
     <ThemeProvider>
       <Provider store={store}>
         
@@ -22,6 +26,11 @@ root.render(
         
       </Provider>
     </ThemeProvider>
+=======
+    <Provider store={store}>
+      <App />
+    </Provider>
+>>>>>>> upstream/main
   </React.StrictMode>
 );
 

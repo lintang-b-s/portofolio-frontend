@@ -29,6 +29,7 @@ const ProjectsListPage = () => {
 			
 			
 	};
+<<<<<<< HEAD
 		let bukannone = projects.filter(project => project.name!= "None")
 		return bukannone
 		.map((project) => (
@@ -41,6 +42,16 @@ const ProjectsListPage = () => {
 					/>
 				</div>
 			
+=======
+		return projects
+		.map((project) => (
+			<div  key={project._id}>
+				<ProjectSingle
+					
+					project={project}
+				/>
+			</div>
+>>>>>>> upstream/main
 		) );
 	}
 
