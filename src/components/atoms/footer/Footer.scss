@@ -1,0 +1,32 @@
+.dkFooter {
+  width: 100%;
+  line-height: 60px;
+  background-color: #f5f5f5;
+
+  .socialMediaWrapper {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-right: 2rem;
+    @media screen and (max-width: 575px) {
+    justify-content: center;
+    }
+  }
+  .dkIcon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .hrStyles {
+    width: 60px;
+    background-color: red;
+    height: 2px;
+  }
+  p {
+    line-height: 25px;
+  }
+  .iconText {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
