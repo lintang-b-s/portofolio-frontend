@@ -70,7 +70,7 @@ export const profileDetail = () => async (dispatch) => {
     try {
         dispatch({ type: PROFILE_DETAILS_REQUEST })
 
-        const { data } = await axiosInstance.get(`http://localhost:3001/api/about`)
+        const { data } = await axiosInstance.get(`/about`)
 
         dispatch({
             type: PROFILE_DETAILS_SUCCESS,
