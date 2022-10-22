@@ -27,6 +27,9 @@ import {
 } from '../constants/profileConstants.js'
 import { logout } from "./userAction.js"
 
+
+const req = `/admins/profiles`;
+
 //profile dg id (bukan list)  tapi obj
 export const getProfileOneDetails = (id) => async (dispatch, getState) => {
     try {
@@ -44,7 +47,7 @@ export const getProfileOneDetails = (id) => async (dispatch, getState) => {
             },
           };
 
-        const { data } = await axiosInstance.get(`http://localhost:3001/api/admins/profiles/6352959893d3aa6ffe45727f`, config);
+        const { data } = await axiosInstance.get(`${req}/6352959893d3aa6ffe45727f`, config);
         dispatch({
             type: PROFILE_DETAILSONE_SUCCESS,
             payload: data,
@@ -98,7 +101,7 @@ export const updateProfile = (profile) => async (dispatch, getState) => {
                 Authorization: `Bearer ${userInfo.token}`,
             },
         };
-        const { data } = await axiosInstance.put(`http://localhost:3001/api/admins/profiles/6352959893d3aa6ffe45727f`, profile, config);
+        const { data } = await axiosInstance.put(`${req}/6352959893d3aa6ffe45727f`, profile, config);
         dispatch({ 
             type: PROFILE_UPDATE_SUCCESS,
             payload: data,
@@ -136,7 +139,7 @@ export const createProfileTech =
                 },
             };
 
-            const { data } = await axiosInstance.post(`http://localhost:3001/api/admins/profiles/6352959893d3aa6ffe45727f/technologies`, techData, config);
+            const { data } = await axiosInstance.post(`${req}/6352959893d3aa6ffe45727f/technologies`, techData, config);
             dispatch({
                 type: PROFILE_CREATE_TECHNOLOGIES_SUCCESS,
                 payload: data,
@@ -170,7 +173,7 @@ export const deleteProfileTech =
                 },
             };
             const { data } = await axiosInstance.delete(
-                `http://localhost:3001/api/admins/profiles/6352959893d3aa6ffe45727f/${techId}`, config
+                `${req}/6352959893d3aa6ffe45727f/${techId}`, config
             );
             dispatch({
                 type: PROFILE_DELETE_TECHNOLOGIES_SUCCESS,
