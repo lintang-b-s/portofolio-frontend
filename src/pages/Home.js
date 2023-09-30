@@ -22,7 +22,7 @@ const Home = () => {
 
             <Organizations></Organizations>
 
-          
+            
 
 
         </div>

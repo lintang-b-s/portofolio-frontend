@@ -25,8 +25,6 @@ const ProjectsListPage = () => {
 	function renderProjects() {
 		if (!projects) {
 			return "tidak ada apa apa "
-				
-			
 			
 	};
 		let bukannone = projects.filter(project => project.name!= "None")

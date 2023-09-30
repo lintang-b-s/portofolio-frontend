@@ -23,10 +23,6 @@ const ActivitiesList = () => {
 
 
 
-
-
-
-
 // kondisionalnya harus diiuncoment
     function renderActivities() {
         if(!activities){
@@ -46,28 +42,18 @@ const ActivitiesList = () => {
 
     }
 
-
-
     return (
         <div className="mt-4">
            <p className="font-medium text-xl sm:text-3xl mb-1 text-ternary-dark dark:text-ternary-light">
-					Activities
+					Experience
 				</p>
 
-            
-
-
         
-
             {/* card */}
-            <div class="p-4 w-full text-center bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <div className="p-4 w-full text-center bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                 {renderActivities()}
             </div>
         </div>
-
-
-
-
 
     )
 

@@ -2,7 +2,7 @@ import axios from "axios"
 
 
 export const axiosInstance = axios.create({
-    baseURL : "https://portofolio-lintangbs.herokuapp.com/api/"
+    baseURL : "http://localhost:3001/api"
 })
 
 

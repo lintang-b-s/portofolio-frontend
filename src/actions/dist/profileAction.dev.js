@@ -33,7 +33,7 @@ var getProfileOneDetails = function getProfileOneDetails(id) {
               }
             };
             _context.next = 6;
-            return regeneratorRuntime.awrap(_config.axiosInstance.get("".concat(req, "/6352959893d3aa6ffe45727f"), config));
+            return regeneratorRuntime.awrap(_config.axiosInstance.get("".concat(req, "/6517b8092b9496c8f240218e"), config));
 
           case 6:
             _ref = _context.sent;
@@ -78,7 +78,7 @@ var profileDetail = function profileDetail() {
               type: _profileConstants.PROFILE_DETAILS_REQUEST
             });
             _context2.next = 4;
-            return regeneratorRuntime.awrap(_config.axiosInstance.get("https://portofolio-lintangbs.herokuapp.com/api/about"));
+            return regeneratorRuntime.awrap(_config.axiosInstance.get("http://localhost:3001/api/about"));
 
           case 4:
             _ref2 = _context2.sent;
@@ -129,7 +129,7 @@ var updateProfile = function updateProfile(profile) {
               }
             };
             _context3.next = 6;
-            return regeneratorRuntime.awrap(_config.axiosInstance.put("".concat(req, "/6352959893d3aa6ffe45727f"), profile, config));
+            return regeneratorRuntime.awrap(_config.axiosInstance.put("".concat(req, "/6517b8092b9496c8f240218e"), profile, config));
 
           case 6:
             _ref3 = _context3.sent;
@@ -187,7 +187,7 @@ var createProfileTech = function createProfileTech(techData) {
               }
             };
             _context4.next = 6;
-            return regeneratorRuntime.awrap(_config.axiosInstance.post("".concat(req, "/6352959893d3aa6ffe45727f/technologies"), techData, config));
+            return regeneratorRuntime.awrap(_config.axiosInstance.post("".concat(req, "/6517b8092b9496c8f240218e/technologies"), techData, config));
 
           case 6:
             _ref4 = _context4.sent;
@@ -238,7 +238,7 @@ var deleteProfileTech = function deleteProfileTech(techId) {
               }
             };
             _context5.next = 6;
-            return regeneratorRuntime.awrap(_config.axiosInstance["delete"]("".concat(req, "/6352959893d3aa6ffe45727f/").concat(techId), config));
+            return regeneratorRuntime.awrap(_config.axiosInstance["delete"]("".concat(req, "/6517b8092b9496c8f240218e/").concat(techId), config));
 
           case 6:
             _ref5 = _context5.sent;

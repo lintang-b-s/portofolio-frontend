@@ -32,6 +32,7 @@ export const listActivities= () => async (dispatch) => {
         type: ACTIVITIES_LIST_REQUEST,
       });
       const { data } = await axiosInstance.get(`${req}`);
+
       dispatch({
         type: ACTIVITIES_LIST_SUCCESS,
         payload: data,

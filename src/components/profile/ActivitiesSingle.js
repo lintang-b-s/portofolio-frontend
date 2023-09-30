@@ -31,17 +31,17 @@ const ActivitieSingle = (props) => {
 
     return (
 
-        <ul class="max-w-full divide-y divide-gray-200 dark:divide-gray-700">
-            <li class="pb-2 sm:pb-3">
-                <div class="flex items-center place-content-between">
-                    {/* <div class="flex-shrink-0">
+        <ul className="max-w-full divide-y divide-gray-200 dark:divide-gray-700">
+            <li className="pb-2 sm:pb-3">
+                <div className="flex items-center place-content-between">
+                    {/* <div className="flex-shrink-0">
                         
                     </div> */}
-                    <div class="flex-initial   w-64 min-w-0">
-                        <p class="text-sm text-xl text-gray-900 truncate dark:text-white">
+                    <div className="flex-initial   w-64 min-w-0">
+                        <p className="text-sm text-xl text-gray-900 truncate dark:text-white">
                         {props.activitie.name}
                         </p>
-                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                        <p className="text-sm text-gray-500 truncate dark:text-gray-400">
                          {props.activitie.description}
                         </p>
                     </div>
@@ -69,7 +69,7 @@ const ActivitieSingle = (props) => {
                                 <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                                     {/*header*/}
                                     <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                                    <h5 class="text-xl font-medium leading-normal text-gray-800" id="exampleModalXlLabel">
+                                    <h5 className="text-xl font-medium leading-normal text-gray-800" id="exampleModalXlLabel">
                                         {props.activitie.name}
                                     </h5>
                                     <button
@@ -83,12 +83,12 @@ const ActivitieSingle = (props) => {
                                     </div>
                                     {/*body*/}
                                     <div className="relative p-6 flex-auto">
-                                    <div class="p-6 space-y-6">
-                                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                                    <div className="p-6 space-y-6">
+                                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                                     {props.activitie.description}
                                     </p>
                                     
-                                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                                         Tanggal:        {props.activitie.date1 && new Intl.DateTimeFormat("en-US", {
                                                     dateStyle: "medium",
                                                     timeStyle: "short",
@@ -99,8 +99,8 @@ const ActivitieSingle = (props) => {
                                                     timeStyle: "short",
                                                     }).format(new Date(props.activitie.date2.toString()))} 
                                     </p>
-                                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                        Merupakan Bagian dari Program Kerja:  {props.activitie.affiliation.name}
+                                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+
                                     </p>
                                 </div>
                                     </div>
@@ -118,13 +118,13 @@ const ActivitieSingle = (props) => {
                                 </div>
                                 </div>
                             </div>
-                            <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+                            {/* <div className="opacity-25 fixed inset-0 z-40 bg-black"></div> */}
                             </>
                         ) : null}
                         </>
 
 
-                    <div class="inline-flex flex-initial w-32  items-center text-sm font-semibold text-gray-900 dark:text-white">
+                    <div className="inline-flex flex-initial w-32  items-center text-sm font-semibold text-gray-900 dark:text-white">
                     {props.activitie.date1 && new Intl.DateTimeFormat("en-US", {
                                 dateStyle: "medium",
                                 timeStyle: "short",
@@ -137,7 +137,7 @@ const ActivitieSingle = (props) => {
                     </div>
 
                 </div>
-                <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700 my-3"></hr>
+                <hr className="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700 my-3"></hr>
             </li>
             <script src="D:\kuliah2\Kuliah_sendiri\web_development\project-sendiri\web\portofolio-buatan\to\flowbite\dist\flowbite.js"></script>
         </ul>

@@ -46,7 +46,7 @@ export const getProfileOneDetails = (id) => async (dispatch, getState) => {
             },
           };
 
-        const { data } = await axiosInstance.get(`${req}/6352959893d3aa6ffe45727f`, config);
+        const { data } = await axiosInstance.get(`${req}/6517b8092b9496c8f240218e`, config);
         dispatch({
             type: PROFILE_DETAILSONE_SUCCESS,
             payload: data,
@@ -69,7 +69,7 @@ export const profileDetail = () => async (dispatch) => {
     try {
         dispatch({ type: PROFILE_DETAILS_REQUEST })
 
-        const { data } = await axiosInstance.get(`https://portofolio-lintangbs.herokuapp.com/api/about`)
+        const { data } = await axiosInstance.get(`http://localhost:3001/api/about`)
 
         dispatch({
             type: PROFILE_DETAILS_SUCCESS,
@@ -101,7 +101,7 @@ export const updateProfile = (profile) => async (dispatch, getState) => {
                 Authorization: `Bearer ${userInfo.token}`,
             },
         };
-        const { data } = await axiosInstance.put(`${req}/6352959893d3aa6ffe45727f`, profile, config);
+        const { data } = await axiosInstance.put(`${req}/6517b8092b9496c8f240218e`, profile, config);
         dispatch({ 
             type: PROFILE_UPDATE_SUCCESS,
             payload: data,
@@ -139,7 +139,7 @@ export const createProfileTech =
                 },
             };
 
-            const { data } = await axiosInstance.post(`${req}/6352959893d3aa6ffe45727f/technologies`, techData, config);
+            const { data } = await axiosInstance.post(`${req}/6517b8092b9496c8f240218e/technologies`, techData, config);
             dispatch({
                 type: PROFILE_CREATE_TECHNOLOGIES_SUCCESS,
                 payload: data,
@@ -173,7 +173,7 @@ export const deleteProfileTech =
                 },
             };
             const { data } = await axiosInstance.delete(
-                `${req}/6352959893d3aa6ffe45727f/${techId}`, config
+                `${req}/6517b8092b9496c8f240218e/${techId}`, config
             );
             dispatch({
                 type: PROFILE_DELETE_TECHNOLOGIES_SUCCESS,

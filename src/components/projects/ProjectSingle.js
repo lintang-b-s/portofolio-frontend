@@ -7,18 +7,13 @@ const ProjectSingle = (props) => {
         
 
         // <Link to={`/projects/${props.project._id}`} aria-label="Proyek" >
-        <Link to={`/`} aria-label="Proyek" >
-            <div className='snap-start  rounded-lg shadow-lg cursor-pointer bg-secondary-light dark:bg-ternary-dark mb-10'>
+        <div aria-label="Proyek" >
+            <div className='snap-start  rounded-lg shadow-lg  bg-secondary-light dark:bg-ternary-dark mb-10'>
                 <div>
                     <a >
 
                         { props.project.images &&  <img src={props.project.images.url}  className="rounded-lg" alt="proyek" />}
-                        {/* {props.project.images &&  <img
-                            src = {props.project.images}
-                            className="rounded-lg"
-                            alt="proyek"
-
-                        /> } */}
+                        \
                         </a>
                 </div>
 
@@ -27,9 +22,11 @@ const ProjectSingle = (props) => {
 						<p className="font-general-medium text-lg md:text-xl text-ternary-dark dark:text-ternary-light mb-2">
 							{props.project.name}
 						</p>
-					
+                        <p>
+                            {props.project.description}
+                        </p>
 				</div>
-                <div className='text-center px-1 py-6'>
+                <div className='text-center px-1 py-3'>
                     <p className="font-general-small text-md md:text-lg text-ternary-gray dark:text-ternary-light mb-2">
 							teknologi yang digunakan: {props.project.technologies}
 					</p>
@@ -37,7 +34,7 @@ const ProjectSingle = (props) => {
             </div>
             
 
-        </Link>
+        </div>
     
     )
 }

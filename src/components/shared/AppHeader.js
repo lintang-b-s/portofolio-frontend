@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom'
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from 'framer-motion';
-import { FaSlash, FaGithub, FaInstagram , FaLinkedin} from 'react-icons/fa';
+import { FaSlash, FaGithub, FaInstagram , FaLinkedin, FaCode} from 'react-icons/fa';
 import Button from '../reusable/Button.js';
 
 const AppHeader = () => {
@@ -92,13 +92,7 @@ const AppHeader = () => {
 							: 'hidden'
 					}
 				>
-					<Link
-						to="/projects"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-						aria-label="Projects"
-					>
-						Projects
-					</Link>
+				
 					<Link
 						to="/about"
 						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
@@ -130,17 +124,10 @@ const AppHeader = () => {
                    
                 {/* Header layar > large */}
                 <div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-                    <Link
-                        to="/projects"
-                        className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-3 mb-2 sm:py-2"
-                        aria-label="Projects"
-                    >
-                        Projects
-                    </Link>
+                 
 					
-					<FaSlash size={20}/>
                     <Link
-                        to="/about"
+                        to="/"
                         className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-3 mb-2 sm:py-2"
                         aria-label="About Me"
                     >
@@ -150,7 +137,7 @@ const AppHeader = () => {
 					
 					
                     <Link
-                        to="/contact"
+                        to="/"
                         className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-3 mb-2 sm:py-2"
                         aria-label="Contact"
                     >
@@ -180,24 +167,13 @@ const AppHeader = () => {
 			
 					</div>
 
-					{/* Dark mode */}
-					<div
-						onClick={() => setTheme(activeTheme)}
-						aria-label="Theme Switcher"
-						className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
-					>
-						{activeTheme === 'dark' ? (
-							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
-						) : (
-							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
-						)}
-					</div>
+				
 				</div>
 				{/* header sisi kanan link social media*/}
 				<div className="hidden sm:flex sm:justify-between items-center sm:ml-10 flex-col sm:flex-row">
-					<a className='mx-3' href="https://github.com/protagonist77/" target="__blank"><FaGithub size={30}/></a>
-					<a className='mx-3' href="https://instagram.com" target="__blank"><FaInstagram size={30}/></a>
+					<a className='mx-3' href="https://github.com/lintang-b-s" target="__blank"><FaGithub size={30}/></a>
 					<a className='mx-3' href="https://www.linkedin.com/in/lintang-birda-saputra-4aa989220/" target="__blank"><FaLinkedin size={30}/></a>
+					<a className='mx-3' href="https://leetcode.com/lintang-b-s/" target="__blank"><FaCode size={30} ></FaCode> </a>
 							
 
 				</div>

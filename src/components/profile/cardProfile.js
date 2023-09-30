@@ -12,13 +12,13 @@ const CardProfile = (props) => {
                             <div className="relative">
                                 <img
                                 alt="..."
-                                src={props.profile.image}
+                                src= {props.profile.image ? props.profile.image.url : ""}
                                 className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px"
                                 />
                             </div>
                             </div>
                             <div className="w-full px-4 text-center mt-20">
-                            
+                         
                             </div>
                         </div>
                         <div className="text-center mt-12">

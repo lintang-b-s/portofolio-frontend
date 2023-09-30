@@ -23,7 +23,7 @@ const ProfileSingle = (props) => {
                         }}
                         className="font-extrabold text-2xl lg:text-3xl xl:text-3xl text-center sm:text-left  dark:text-primary-light tracking-wide"
                     >
-                        Hi! Kenalin ,Aku {props.profile.name.slice(0,8)}
+                        Hi! Perkenalkan , Saya {props.profile.name.slice(0,8)}
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0 }}
