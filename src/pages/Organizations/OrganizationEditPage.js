@@ -97,6 +97,7 @@ const OrganizationEditPage = () => {
 
     const handleOrgImageUpload = (e) => {
       const file = e.target.files[0];
+      setOrganizationImg(file);
 
       TransformFileData(file);
     }
@@ -106,7 +107,6 @@ const OrganizationEditPage = () => {
       if (file) {
         reader.readAsDataURL(file);
         reader.onloadend =() => {
-          setOrganizationImg(reader.result);
         }
       } else {
         setOrganizationImg("");
@@ -162,8 +162,7 @@ const OrganizationEditPage = () => {
         formData.set("name", name);
         formData.set("position", position);
         formData.set("date1", date1);
-        formData.set("activities", activitiesName);
-        formData.set("projects", projectsName);
+       
         if (date2){
           formData.set("date2", date2);
         }
@@ -178,18 +177,7 @@ const OrganizationEditPage = () => {
 
         formData.append("images", organizationImg);
 
-       
-        console.log("formData: ", name);
-        console.log("formData: ", position);
-        console.log("formData: ", date1);
-        if (activities){
-          console.log("activities", activities);
-        }
-        if (projectsName){
-          console.log("projects", projectsName);
-        }
-        console.log("date2", date2);
-        console.log("profile", profileName);
+    
      
         dispatch(updateOrganization(organization._id, formData));
 
@@ -321,37 +309,6 @@ const OrganizationEditPage = () => {
               />
               
               </div> 
-
-
-
-              <div className="relative z-0 mb-6 w-full group" controlId="activities">
-
-              <label htmlFor="activities" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Activities</label>
-                  <select id="activities" name="activities" onChange={(e) => setActivitiesName(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                        <option name="affiliation" > Please select a Value! </option>
-                    {activities.map((actv, index) => 
-                        <option name="activities" key={index} value={actv._id}>{actv.name}</option>
-                    )}
-
-                  </select>
-
-               </div>
-
-
-
-                <div className="relative z-0 mb-6 w-full group" controlId="projects">
-
-                    <label htmlFor="projects" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">projects</label>
-                        <select id="projects" name="projects" onChange={(e) => setProjectsName (e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                          <option name="affiliation" > Please select a Value! </option>
-                            {projects.map((project, index) => 
-                                <option name="projects" key={index} value={project._id}>{project.name}</option>
-                            )}
-
-                        </select>
-
-               </div>
-
 
                <div className="relative z-0 mb-6 w-full group" controlId="profile">
                 

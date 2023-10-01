@@ -65,11 +65,6 @@ const reducer = combineReducers({
     activitiesDelete :activitiesDeleteReducer,
     activitiesList :activitiesListReducer,
     activitiesUpdate : activitiesUpdateReducer,
-  
-
-    
-
-    
 })
 
 

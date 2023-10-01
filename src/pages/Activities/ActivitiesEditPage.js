@@ -108,10 +108,10 @@ const ActivitiesEditPage = () => {
         formData.set("date1", date1);
         formData.set("date2", date2);
         formData.set("profile", profileName);
-        if (affiliation != 'Please select a Value!'){
+        if (affiliation !== ''){
             formData.set("affiliation", affiliation);
         }
-        console.log("organizations: ", organizations)
+    
         dispatch(updateActivities(activitie._id, formData));
 
     }

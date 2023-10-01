@@ -10,7 +10,7 @@ var _axios = _interopRequireDefault(require("axios"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var axiosInstance = _axios["default"].create({
-  baseURL: "http://localhost:3001/"
+  baseURL: "https://api.lintangbs1.my.id/"
 });
 
 exports.axiosInstance = axiosInstance;

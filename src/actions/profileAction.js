@@ -68,8 +68,8 @@ export const getProfileOneDetails = (id) => async (dispatch, getState) => {
 export const profileDetail = () => async (dispatch) => {
     try {
         dispatch({ type: PROFILE_DETAILS_REQUEST })
-
-        const { data } = await axiosInstance.get(`http://localhost:3001/api/about`)
+        
+        const { data } = await axiosInstance.get(`https://api.lintangbs1.my.id/api/about`)
 
         dispatch({
             type: PROFILE_DETAILS_SUCCESS,

@@ -47,8 +47,7 @@ const NewOrganizationPage = () => {
     const [ date1, setDate1 ] = useState('');
     const [ date2, setDate2 ] = useState('');
     const [ images, setImages ] = useState('');
-    const [ activitiesName, setActivitiesName ] = useState('');
-    const [ projectsName, setProjectsName ] = useState('');
+
     const [ profileName, setProfileName ] = useState('');
     const [organizationImg, setOrganizationImg] = useState('');
 
@@ -104,7 +103,7 @@ const NewOrganizationPage = () => {
 
     const handleOrgImageUpload = (e) => {
         const file = e.target.files[0];
-  
+        setOrganizationImg(file);
         TransformFileData(file);
       }
   
@@ -113,7 +112,7 @@ const NewOrganizationPage = () => {
         if (file) {
           reader.readAsDataURL(file);
           reader.onloadend =() => {
-            setOrganizationImg(reader.result);
+            
           }
         } else {
           setOrganizationImg("");
@@ -166,8 +165,7 @@ const NewOrganizationPage = () => {
         formData.append("images", organizationImg);
 
 
-        formData.set("activities", activitiesName);
-        formData.set("projects", projectsName);
+      
         formData.set("profile", profileName);
 
 
@@ -280,43 +278,10 @@ const NewOrganizationPage = () => {
                     </div>
 
 
-                    <div className="relative z-0 mb-6 w-full group" controlId="activities">
-              
-
-
-                        <label htmlFor="activities" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Activities</label>
-                            <select id="activities" name="activities" onChange={(e) => setActivitiesName(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            
-                            <option name="activities" > Please select a Value! </option>
-                            {activities.map((actv, index) => 
-                                <option name="activities" key={index} value={actv._id}>{actv.name}</option>
-                                )}
-                            
-                            
-                            
-                            </select>
-
-                    </div>
 
 
 
-                    <div className="relative z-0 mb-6 w-full group" controlId="projects">
-              
-
-
-                        <label htmlFor="projects" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Projects</label>
-                            <select id="projects" name="projects" onChange={(e) => setProjectsName(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            
-                            <option name="projects" > Please select a Value! </option>
-                            {projects.map((prj, index) => 
-                                <option name="projects" key={index} value={prj._id}>{prj.name}</option>
-                                )}
-                            
-                            
-                            
-                            </select>
-
-                    </div>
+                  
 
 
                     <div className="relative z-0 mb-6 w-full group" controlId="profile">

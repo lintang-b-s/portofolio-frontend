@@ -152,8 +152,7 @@ var NewProjectPage = function NewProjectPage() {
     formData.set("technologies", technologies);
     formData.set("profile", profileName);
     formData.set("affiliation", affiliation);
-    console.log("formData: ", formData);
-    console.log("affiliation", affiliation);
+  
     dispatch((0, _projectAction.createNewProject)(formData));
   };
 };

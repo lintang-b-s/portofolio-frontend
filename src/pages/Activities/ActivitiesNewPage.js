@@ -135,7 +135,10 @@ const NewActivitiesPage = () => {
         }
         
         formData.set("profile", profileName);
-        formData.set("affiliation", affiliationName);
+
+        if (affiliationName !== ''){
+            formData.set("affiliation", affiliationName);
+        }
 
         dispatch(createNewActivities(formData));
 

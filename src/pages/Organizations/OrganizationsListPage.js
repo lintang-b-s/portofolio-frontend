@@ -67,7 +67,7 @@ const OrganizationListAdmin = () => {
         dispatch(createNewOrganization())
     }
 
-    console.log("org:", organizations);
+   
 
     return (
         <div className="flex flex-wrap gap-x-3 mx-3 my-5 text-center bg-white rounded-lg border shadow-md sm:p-2 dark:bg-gray-800 dark:border-gray-700">

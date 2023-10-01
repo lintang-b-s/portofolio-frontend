@@ -74,9 +74,10 @@ const SidebarProfile = () => {
         organizations }  = useGetOrganizations();
 
     const handleProfileImgUpload = (e) => {
-        console.log("file1 : ", e.target.files[0] );
+     
         const file = e.target.files[0];
-        console.log("file : ", file );
+
+        setProfileImg(file);
         TransformProfData(file);
     }
 
@@ -86,7 +87,7 @@ const SidebarProfile = () => {
         if(file) {
             reader.readAsDataURL(file);
             reader.onloadend = () => {
-                setProfileImg(reader.result);
+               
             }
         } else {
             setProfileImg("");
@@ -95,7 +96,7 @@ const SidebarProfile = () => {
 
     const handleTechImageUpload = (e) => {
         const file = e.target.files[0];
-
+        setTechImg(file);
         TransformFileData(file);
     }
 
@@ -105,7 +106,7 @@ const SidebarProfile = () => {
         if (file) {
             reader.readAsDataURL(file);
             reader.onloadend = () => {
-                setTechImg(reader.result);
+                
             }
         } else {
             setTechImg("")
@@ -165,7 +166,7 @@ const SidebarProfile = () => {
             // dispatch(getProfileOneDetails());
          
         } else{
-            console.log("profile: " ,profile);
+     
 
             setName(profile.name);
             setDescription(profile.description);
@@ -288,7 +289,7 @@ const SidebarProfile = () => {
         profData.set("activities", activitiesName);
         profData.set("projects", projectsName);
         profData.append("image", profileImg);
-        console.log("profileIMg: ", profileImg)
+  
         dispatch(updateProfile(profData))
 
     }

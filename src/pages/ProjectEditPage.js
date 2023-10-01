@@ -97,7 +97,8 @@ const ProjectEditPage = () => {
     // untuk upload cloudinary
     const handleProjectImageUpload = (e) => {
       const file = e.target.files[0];
-      console.log("file: ", file)
+  
+      setProjectImg(file);
 
       TransformFileData(file);
     }
@@ -108,8 +109,6 @@ const ProjectEditPage = () => {
       if (file) {
         reader.readAsDataURL(file);
         reader.onloadend = () => {
-          setProjectImg(reader.result);
-          console.log("projectImg: ", projectImg)
           
         }
       } else {
@@ -124,7 +123,13 @@ const ProjectEditPage = () => {
     
   // },[dispatch])
 
+
+
   useEffect(() => {
+    if (!userInfo) {
+      navigate("/admin")
+    }
+
     if (successUpdate) {
       dispatch({ type: PROJECT_UPDATE_RESET });
       navigate("/admin/projects");
@@ -145,11 +150,7 @@ const ProjectEditPage = () => {
       setAffiliation(project.affiliation);
     
       setProfileName(profile._id);
-
- 
     }
-
-  
  
 
   }, [dispatch, id, project])
@@ -168,18 +169,16 @@ const ProjectEditPage = () => {
     // }
 
     formData.append("images", projectImg);
-    console.log("projectImg: ", projectImg)
+
     
     formData.set("technologies", technologies);
     formData.set("profile", profileName);
-    if (affiliation != 'Please Select a value!'){
+    if (affiliation !== ''){
       formData.set("affiliation", affiliation);
     }
     
 
-    console.log("formData: ", formData)
-    console.log("affiliation", affiliation)
-    
+   
 
 
   

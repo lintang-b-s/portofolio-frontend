@@ -68,6 +68,8 @@ const NewProjectPage = () => {
 
     const handleProjectImageUpload = (e) => {
       const file = e.target.files[0];
+      setProjectImg(file);
+
 
       TransformFileData(file);
     }
@@ -78,7 +80,6 @@ const NewProjectPage = () => {
       if (file) {
         reader.readAsDataURL(file);
         reader.onloadend = () => {
-          setProjectImg(reader.result);
         }
       } else {
         setProjectImg("");
@@ -125,8 +126,6 @@ const NewProjectPage = () => {
         if (successCreate) {
           dispatch({ type: PROJECT_CREATE_RESET });
           navigate("/admin/projects");
-          
-          
         } 
         
         if ( !organizations){
@@ -138,8 +137,6 @@ const NewProjectPage = () => {
         if (profile.name != "Lintang Birda Saputra"){
           dispatch(getProfileOneDetails("settings"));
         }
-        
-        
           // setName(project.name);
           // setDescription(project.description);
           // setDate1(project.date1);
@@ -148,13 +145,6 @@ const NewProjectPage = () => {
           // setAffiliation(project.affiliation);
         
           setProfileName(profile._id);
-    
-      
-         
-    
-      
-     
-    
       }, [dispatch, id, profile, organizations])
 
    
@@ -173,12 +163,14 @@ const NewProjectPage = () => {
     
     formData.set("technologies", technologies);
     formData.set("profile", profileName);
-    formData.set("affiliation", affiliation);
+    if (affiliation !== ''){
+      formData.set("affiliation", affiliation);
+
+    }
 
     
 
-    console.log("formData: ", formData)
-    console.log("affiliation", affiliation)
+  
     
 
 

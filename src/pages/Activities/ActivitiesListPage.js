@@ -67,8 +67,7 @@ const ActivitiesListAdmin = () => {
     const createActivitiesHandler = (e) => {
         dispatch(createNewActivities());
     }
-    console.log("tesss");
-    console.log('activitipayload: ', activities);
+
 
 
 

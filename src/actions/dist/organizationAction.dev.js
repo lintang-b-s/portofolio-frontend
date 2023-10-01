@@ -13,7 +13,7 @@ var _userAction = require("./userAction.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var req = "http://localhost:3001/api/admins/organizations";
+var req = "https://api.lintangbs1.my.id/api/admins/organizations";
 
 var listOrganizations = function listOrganizations() {
   return function _callee(dispatch) {
