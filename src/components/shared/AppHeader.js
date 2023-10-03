@@ -112,8 +112,8 @@ const AppHeader = () => {
 					</Link>
 					<Link>
 						<div className='flex flex-row justify-between border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark'>
-							<a className='mx-3' href="https://github.com/protagonist77/" target="__blank"><FaGithub size={30}/></a>
-							<a className='mx-3' href="https://instagram.com" target="__blank"><FaInstagram size={30}/></a>
+							<a className='mx-3' href="https://github.com/lintang-b-s" target="__blank"><FaGithub size={30}/></a>
+							<a className='mx-3' href="https://leetcode.com/lintang-b-s/" target="__blank"><FaCode size={30} ></FaCode> </a>
 							<a className='mx-3' href="https://www.linkedin.com/in/lintang-birda-saputra-4aa989220/" target="__blank"><FaLinkedin size={30}/></a>
 						</div>
 					</Link>
