@@ -78,7 +78,7 @@ var profileDetail = function profileDetail() {
               type: _profileConstants.PROFILE_DETAILS_REQUEST
             });
             _context2.next = 4;
-            return regeneratorRuntime.awrap(_config.axiosInstance.get("https://api.lintangbs1.my.id/api/about"));
+            return regeneratorRuntime.awrap(_config.axiosInstance.get("https://api.lintangbs.my.id/api/about"));
 
           case 4:
             _ref2 = _context2.sent;

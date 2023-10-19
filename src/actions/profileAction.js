@@ -69,7 +69,7 @@ export const profileDetail = () => async (dispatch) => {
     try {
         dispatch({ type: PROFILE_DETAILS_REQUEST })
         
-        const { data } = await axiosInstance.get(`https://api.lintangbs1.my.id/api/about`)
+        const { data } = await axiosInstance.get(`https://api.lintangbs.my.id/api/about`)
 
         dispatch({
             type: PROFILE_DETAILS_SUCCESS,
